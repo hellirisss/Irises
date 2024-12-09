@@ -1,0 +1,252 @@
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Sofia&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=GFS+Didot&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Sofia&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+
+    <title>Blog</title>
+
+    <style>
+         body {
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .blog-container {
+      margin-top: 50px;
+    }
+
+    .blog-row img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .blog-row img:hover {
+      transform: scale(1.05); 
+    }
+
+    .blog-title {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 20px;
+      color: #d00000;
+    }
+
+    .blog-row {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+  
+    @media (max-width: 768px) {
+      .blog-row {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+
+    body {
+            background: url(img/penk.jpg);
+            background-size: cover;
+            background-position: center;
+            
+        }
+
+        .card-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px #d00000;
+}
+       
+.grid-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 0; 
+    }
+
+  
+    .grid-gallery img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .grid-gallery img:hover {
+      transform: scale(1.1); 
+      box-shadow: 0 10px 15px pink;
+      z-index: 1;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    </style>
+    
+    <nav class="nav-wrapper red lighten-4" >
+      <div class="container center">
+        <a href="index.html" class="brand-logo" style="display: flex; align-items: center;">
+            <img src="img/donut.png" alt="Iris & Glaze Donuts" style="height: 60px; width: auto; margin-left: 100px; margin-right: 10px;">
+            <span style="font-family: 'Playfair Display', cursive; font-size: 2rem; color: #d00000;">IrisGlaze</span>
+          </a>
+
+            <a href="#" class="sidenav-trigger" data-target="mobile-menu">
+                <i class="material-icons">menu</i>
+            </a>
+            
+            <ul class="right hide-on-med-and-down" style="font-family: 'Playfair Display', cursive; font-size: 2rem;">
+      
+                <li><a style="color: #d00000;" href="menu.html" class="Menu">Menu</a></li>
+                <li><a style="color: #d00000;" href="blog.html">Blog</a></li>
+                <li><a style="color: #d00000;" href="Sevices.html">Services</a></li>
+                <li><a href="OnOrders.html" class="tooltipped btn-floating btn-small transparent" data-tooltip="Get Your Donut!">
+                    <i style="color:#d00000" class="material-icons prefix">shopping_cart_checkout</i>
+                </a></li>
+                <li><a href="https://www.instagram.com/hell_irisss/?next=%2F" class="tooltipped btn-floating btn-small transparent" data-tooltip="Instagram">
+                    <i style="color: #d00000;" class="fab fa-instagram"></i>
+                </a></li>
+                <li><a href="https://www.facebook.com/hellaena.villanuevatacud?mibextid=ZbWKwL" class="tooltipped btn-floating btn-small transparent" data-tooltip="Facebook">
+                    <i style="color: #d00000;" class="fab fa-facebook"></i>
+                </a></li>
+            </ul>
+            <ul class="sidenav pink lighten-2" id="mobile-menu">
+              <li><a style="color: white; font-family: Quicksand;" href="index.html">Back to the Bakery</a></li>
+              <li><a style="color: white; font-family: Quicksand;" href="menu.html" class="Menu">Menu</a></li>
+              <li><a style="color: white; font-family: Quicksand;" href="blog.html">Blog</a></li>
+              <li><a style="color: white; font-family: Quicksand;" href="Sevices.html">Services</a></li>
+              <li><a style="color: white; font-family: Quicksand;" href="OnOrders.html">Order Online</a></li>
+            </ul>
+        </div>
+    </nav>
+ </head>
+
+    <body>
+      <div class="container blog-container">
+        <div class="row blog-row">
+          <!-- Column 1 -->
+          <div class="col s12 m4">
+            <img src="img/BREAKFAST1.jpg" alt="Image 1">
+          </div>
+    
+          <!-- Column 2 -->
+          <div class="col s12 m4">
+            <img src="img/BREAKFAST.webp" alt="Image 2">
+          </div>
+    
+          <!-- Column 3 -->
+          <div class="col s12 m4">
+            <img src="img/BREAKFAST2.jpg" alt="Image 3">
+          </div>
+        </div>
+    
+        <!-- Title or Caption -->
+        <h1 style="font-family: 'Playfair Display', cursive; color: #d00000;" class="blog-title">HOW DONUTS BECAME A STAPLE OF AMERICAN BREAKFAST CULTURE</h1>
+        <p style="font-family: 'Quicksand';"class="center-align">
+          While donuts were initially consumed as a snack or dessert, they gradually became associated with breakfast.
+  
+  
+  This shift was influenced by several factors, including the rise of coffee culture in the 20th century. As coffee shops proliferated, donuts became a popular pairing with coffee due to their sweetness and ease of consumption.
+  
+  In the mid-20th century, the expansion of donut chains like Dunkin’ Donuts played a crucial role in solidifying the donut as a breakfast staple. Founded in 1950 by <b>William Rosenberg in Quincy, Massachusetts </b>, Dunkin’ Donuts focused on serving fresh coffee and donuts to busy workers and commuters.
+  
+  The chain’s emphasis on convenience and consistency appealed to the fast-paced lifestyle of post-war America, where people increasingly sought quick and portable breakfast options.
+  
+  Marketing campaigns by donut chains also contributed to the perception of donuts as a breakfast food. Dunkin’ Donuts, for example, famously used the slogan “America Runs on Dunkin’,” reinforcing the idea that donuts and coffee were essential to starting the day.
+  
+  This messaging resonated with the public, and the combination of donuts and coffee became a morning ritual for many Americans.
+  
+  Donuts became associated with coffee in American culture due to several interrelated factors that transformed them into a popular breakfast pairing.
+        </p>
+     
+</div>
+
+    <section class="container section scrollspy" id="photo's">
+      <div class="row">
+          <div class="col s2 l6">
+              <a href="img/blog1.jpg" data-lightbox="image-set"></href>
+              <img src="img/blog1.jpg" alt="" class="responsive-img materialbox hoverable"></a>
+          </div>
+          <br><br><div class="col s12 l6">
+            <h4 style="font-family: 'Playfair Display', cursive; font-weight:400;">
+              <a href="https://donutinfo.com/the-evolution-of-donuts/" target="_blank"  class="red-text">The Evolution of Donut</a> </h4>
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="col s2 l6 push-l6">
+              <img src="img/blog2.jpg" alt="" class="responsive-img materialbox hoverable">
+          </div>
+          <br><br><div class="col s12 l6 pull-l6 right-align">
+            <h4 style="font-family: 'Playfair Display', cursive; font-weight:400;">
+              <a href="https://donutinfo.com/donuts-in-different-countries/" target="_blank" class="red-text">Donuts in Different Countries</a> </h4>
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="col s2 l6">
+              <img src="img/blog3.webp" alt="" class="responsive-img materialbox hoverable">
+          </div>
+          <br><br><div class="col s12 l6">
+            <h4 style="font-family: 'Playfair Display', cursive; font-weight:400;">
+              <a href="https://donutinfo.com/how-do-i-make-donuts/" target="_blank" class="red-text">How do i make Donuts?</a> </h4>
+      </div>
+  </section>
+
+  <div class="container" style="padding: 0;"> 
+    <div class="grid-gallery">
+      <!-- Images in the gallery -->
+      <img src="img/blog4.avif" alt="Gallery Image 1">
+      <img src="img/blog5.jpg" alt="Gallery Image 2">
+      <img src="img/blog6.jpg" alt="Gallery Image 3">
+      <img src="img/blog7.jpg" alt="Gallery Image 4">
+      <img src="img/blog8.jpg" alt="Gallery Image 5">
+      <img src="img/blog9.jpg" alt="Gallery Image 6">
+      <img src="img/blog10.jpg" alt="Gallery Image 7">
+      <img src="blog/Cinnamon Sugar Brioche Donuts.jpg" alt="Gallery Image 8">
+      <img src="blog/Donuts.jpg" alt="hays">
+      <img src="blog/download (2).jpg">
+      <img src="blog/Gemini_Generated_Image_sw7yyvsw7yyvsw7y.jpg">
+      <img src="blog/download (3).jpg">
+      <img src="blog/Food.jpg">
+      <img src="blog/g e o r g i a n a.jpg">
+      <img src="blog/Gourmet Indulgence_ Valentine's Dessert Affair.jpg">
+      <img src="blog/How To Make Doughnuts (Doughnut Troubleshooting).jpg">
+      <img src="blog/Powdered Cake Donuts — Jonathan Stiers.jpg">
+      <img src="blog/𝘭𝘦𝘦𝘯𝘢 𝘴𝘢𝘬𝘶𝘳𝘢.jpg">
+
+    </div>
+  </div>
+
+</body>
+        <script>
+              document.addEventListener('DOMContentLoaded', function () {
+              
+              const tabs = document.querySelectorAll('.tabs');
+              M.Tabs.init(tabs);
+            $('.tooltipped').tooltip();
+            $('.scrollspy').scrollSpy();
+          });
+          document.addEventListener('DOMContentLoaded', function () {
+            const sidenav = document.querySelectorAll('.sidenav');
+            M.Sidenav.init(sidenav);
+        });
+      </script>
+
+<script src="js/jquery.js"></script>
+<script src="js/materialize.min.js"></script>
+        
+</html>

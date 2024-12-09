@@ -1,0 +1,378 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <title>Services</title>
+
+    <style>
+        
+        body{
+      background: url(Services/download\ \(2\).jpg);
+      background-size: cover;
+      background-position: center;
+      min-height: 1000px;
+  }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .card {
+      width: 300px;
+      height: 350px;
+      perspective: 1000px;
+    }
+
+    .card-content {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.6s ease-in-out;
+      transform-style: preserve-3d;
+    }
+
+    .card:hover .card-content {
+      transform: rotateY(180deg);
+    }
+
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      backface-visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-front {
+      background: pink;
+      color: #d32f2f;
+    }
+
+    .card-back {
+      background: pink;
+      color: #d00000;
+      transform: rotateY(180deg);
+    }
+
+    .card-icon {
+      font-size: 50px;
+      margin-bottom: 15px;
+      justify-content: center;
+    }
+
+    .card h5 {
+      margin: 10px 0;
+      font-size: 1.5rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      .card {
+        width: 90%;
+        height: 300px;
+      }
+    }
+
+    .mission-section {
+            background: transparent;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+
+        .mission-header {
+            color: transparent;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .mission-text {
+            font-size: 18px;
+            color: pink;
+            margin-bottom: 30px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .services-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .services-icons i {
+          width: 100px; 
+          height: 100px; 
+          margin: 20px; 
+          font-size: 4rem;
+            color: pink;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .services-icons i:hover {
+            transform: scale(1.2);
+        }
+
+       
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .services-icons {
+                flex-direction: column;
+                align-items: center;
+            }
+          }
+
+    </style>
+         
+    </head>
+
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Sofia&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=GFS+Didot&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Sofia&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+
+    <header>
+        <nav class="nav-wrapper red lighten-4" >
+            <div class="container center">
+                <a href="index.html" class="brand-logo" style="display: flex; align-items: center;">
+                    <img src="img/donut.png" alt="Iris & Glaze Donuts" style="height: 60px; width: auto; margin-left: 100px; margin-right: 10px;">
+                    <span style="font-family: 'Playfair Display', cursive; font-size: 2rem; color: #d00000;">IrisGlaze</span>
+                  </a>
+    
+                <a href="#" class="sidenav-trigger" data-target="mobile-menu">
+                    <i class="material-icons">menu</i>
+                </a>
+                
+                <ul class="right hide-on-med-and-down" style="font-family: 'Playfair Display', cursive; font-size: 2rem;">
+          
+                    <li><a style="color: #d00000;" href="menu.html" class="Menu">Menu</a></li>
+                    <li><a style="color: #d00000;" href="blog.html">Blog</a></li>
+                    <li><a style="color: #d00000;" href="Sevices.html">Services</a></li>
+                    <li><a href="OnOrders.html" class="tooltipped btn-floating btn-small transparent" data-tooltip="Get Your Donut!">
+                        <i style="color:#d00000" class="material-icons prefix">shopping_cart_checkout</i>
+                    </a></li>
+                    <li><a href="https://www.instagram.com/hell_irisss/?next=%2F" class="tooltipped btn-floating btn-small transparent" data-tooltip="Instagram">
+                        <i style="color: #d00000;" class="fab fa-instagram"></i>
+                    </a></li>
+                    <li><a href="https://www.facebook.com/hellaena.villanuevatacud?mibextid=ZbWKwL" class="tooltipped btn-floating btn-small transparent" data-tooltip="Facebook">
+                        <i style="color: #d00000;" class="fab fa-facebook"></i>
+                    </a></li>
+                </ul>
+                <ul class="sidenav pink lighten-2" id="mobile-menu">
+                  <li><a style="color: white; font-family: Quicksand;" href="index.html">Back to the Bakery</a></li>
+                    <li><a style="color: white; font-family: Quicksand;" href="/indexko.html"  href="menu.html">Menu</a></li>
+                    <li><a style="color: white; font-family: Quicksand;" href="/indexko.html" href="blog.html">Blog</a></li>
+                    <li><a style="color: white; font-family: Quicksand;" href="/indexko.html" href="Sevices.html">Services</a></li>
+                    <li><a style="color: white; font-family: Quicksand;" href="/indexko.html" href="OnOrders.html">Order Online</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <body>
+      <section class="mission-section">
+        <br><br><h1 style="font-family: 'Playfair Display', cursive; font-weight: bolder; color: black;" class="mission-header">IrisGlaze Goodness</h1>
+        <p style="font-family: 'Quicksand';  color: black;" class="mission-text">We believe in creating the most delicious and joyful donuts with a perfect blend of sweetness, creativity, and love for all!</p>
+
+        <br><br><br><br><div class="services-icons">
+            <div class="service-item">
+                <i style=" justify-content: center; color: #d00000;" class="fas fa-leaf"></i>
+                <p style="font-family: 'Quicksand'; font-weight: bold;  color: black;" class="service-title">Fresh Ingredients</p>
+            </div>
+            <div class="service-item">
+                <i style="color: #d00000"  class="fas fa-hand-holding-heart"></i>
+                <p style="font-family: 'Quicksand'; font-weight: bold; color: black;" class="service-title">Handcrafted</p>
+            </div>
+            <div class="service-item">
+                <i style="color: #d00000"  class="fas fa-utensils"></i>
+                <p style="font-family: 'Quicksand'; font-weight: bold; color: black;" class="service-title">Made to Order</p>
+            </div>
+            <div class="service-item">
+                <i style="color: #d00000"  class="fas fa-cogs"></i>
+                <p style="font-family: 'Quicksand'; font-weight: bold; color: black;" class="service-title">Innovative Flavors</p>
+            </div>
+
+            <p style="font-family: 'Quicksand'; font-size: medium; padding-top: 40px; color: black;"> Our donuts are made with only the freshest ingredients, ensuring every bite is as delicious as the last.s
+              Handcrafted with love and care, each donut is made to order,
+              <br> so you can enjoy it at its peak of freshness. We pride ourselves on offering innovative <br>
+              flavors that push the boundaries of what a donut can be, turning every <br>
+              visit into a new and exciting taste adventure. Whether you’re craving classic favorites <br>
+              or daring new combinations, we’ve got something to satisfy every sweet tooth!"</p>
+        </div>
+    </section>
+
+
+        <div style="padding-top: 80px" class="card-container">
+            <!-- Card 1 -->
+            <div class="card">
+              <div class="card-content">
+                <div class="card-front">
+                  <i class="material-icons card-icon">brush</i>
+                  <h5 style="font-family: Playfair Display; font-weight: bold;">Donut Designer</h5>
+                  <p style="font-family: Quicksand;">Click to learn more!</p>
+                </div>
+                <div class="card-back">
+                  <h5 style="font-family: Playfair Display; font-weight: bold;">Donut Designer</h5>
+                  <p style="font-family: Quicksand;">Dream it, we’ll donut it! Create your own unique donut with the perfect mix of flavors, fillings, and toppings.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+              <div class="card-content">
+                <div class="card-front">
+                  <i class="material-icons card-icon">local_fire_department</i>
+                  <h5 style="font-family: Playfair Display; font-weight: bold;">Crafted Fresh, Only When You Ask!</h5>
+                  <p style="font-family: Quicksand;">Click to learn more!</p>
+                </div>
+                <div class="card-back">
+                  <h5 style="font-family: Playfair Display; font-weight: bold;">Crafted Fresh, Only When You Ask!</h5>
+                  <p style="font-family: Quicksand;">Every donut is handmade with care, ensuring the freshest, most mouthwatering treats, just for you.</p>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Card 3 -->
+            <div class="card">
+              <div class="card-content">
+                <div class="card-front">
+                  <i class="material-icons card-icon">redeem</i>
+                  <h5 style="font-family: Playfair Display; font-weight: bold;">Sweet Donut Surprises</h5>
+                  <p style="font-family: Quicksand;">Click to learn more!</p>
+                </div>
+                <div class="card-back">
+                  <h5 style="font-family: Playfair Display; font-weight: bold;">Sweet Donut Surprises</h5>
+                  <p style="font-family: Quicksand;">From birthdays to just-because moments, surprise your loved ones with our donut cakes or special gift boxes filled with our best creations.</p>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Card 4 -->
+            <div class="card">
+              <div class="card-content">
+                <div class="card-front">
+                  <i class="material-icons card-icon">style</i>
+                  <h5 style="font-family: Playfair Display; font-weight: bold;">Flavor Adventures</h5>
+                  <p style="font-family: Quicksand;">Click to learn more!</p>
+                </div>
+                <div class="card-back">
+                  <h5 style="font-family: Playfair Display; font-weight: bold;">Flavor Adventures</h5>
+                  <p style="font-family: Quicksand;">Forget the ordinary! Our innovative, one-of-a-kind flavors will take your taste buds on a sweet adventure.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <div style="margin-top: 80px;" class="parallax-container">
+            <br><br><br><br><br><br><br><br><br><div class="center-align">
+              <li><a style="color:#d00000" class="waves-effect waves-light btn-large  pink lighten-3" href="OnOrders.html">Avail Now!</a></li>
+            </div>
+            <!-- Parallax Image -->
+        <div class="parallax">
+         <br><br><br><br> <img src="Service/parallax.webp" alt="Parallax Background">
+        </div>
+        </div>
+    
+          <div style="padding-top: 80px; padding-bottom: 80px;" class="card-container">
+            <!-- Card 1 -->
+            <div class="card">
+              <div class="card-content">
+                <div class="card-front">
+                  <i class="material-icons card-icon">celebration</i>
+                  <h5 style="font-family: Playfair Display; font-weight: bold;">Donut Party Perfection</h5>
+                  <p style="font-family: Quicksand;">Click to learn more!</p>
+                </div>
+                <div class="card-back">
+                  <h5 style="font-family: Playfair Display; font-weight: bold;">Donut Party Perfection</h5>
+                  <p style="font-family: Quicksand;">Let the donut party come to you! We offer catering that’s sure to make your next event unforgettable.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+              <div class="card-content">
+                <div class="card-front">
+                  <i class="material-icons card-icon">local_shipping</i>
+                  <h5 style="font-family: Playfair Display; font-weight: bold;">Quick Picks & Sweet Drops</h5>
+                  <p style="font-family: Quicksand;">Click to learn more!</p>
+                </div>
+                <div class="card-back">
+                  <h5 style="font-family: Playfair Display; font-weight: bold;">Quick Picks & Sweet Drops</h5>
+                  <p style="font-family: Quicksand;">Craving donuts but can’t make it in? No worries! We offer delivery and takeout for all your sweet cravings.</p>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Card 3 -->
+            <div class="card">
+              <div class="card-content">
+                <div class="card-front">
+                  <i class="material-icons card-icon">favorite</i>
+                  <h5 style="font-family: Playfair Display; font-weight: bold;">Kind-to-All Donuts</h5>
+                  <p style="font-family: Quicksand;">Click to learn more!</p>
+                </div>
+                <div class="card-back">
+                  <h5 style="font-family: Playfair Display; font-weight: bold;">Kind-to-All Donuts</h5>
+                  <p style="font-family: Quicksand;">Donuts for everyone! Our plant-based and gluten-free options are crafted to be just as delicious, ensuring no one misses out on the sweetness.</p>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Card 4 -->
+            <div class="card">
+              <div class="card-content">
+                <div class="card-front">
+                  <i class="material-icons card-icon">volunteer_activism</i>
+                  <h5 style="font-family: Playfair Display; font-weight: bold;">Free Donut Fridays</h5>
+                  <p style="font-family: Quicksand;">Click to learn more!</p>
+                </div>
+                <div class="card-back">
+                  <h5 style="font-family: Playfair Display; font-weight: bold;">Free Donut Fridays</h5>
+                  <p style="font-family: Quicksand;">Start your weekend on a sweet note! Get a free donut with every coffee purchase every Friday. Because Fridays deserve a little extra frosting!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+    </body>
+
+
+    <footer>
+
+    </footer>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script>
+      $('.parallax').parallax();
+      $('.tooltipped').tooltip();
+      $('.scrollspy').scrollSpy();
+      document.addEventListener('DOMContentLoaded', function () {
+            const sidenav = document.querySelectorAll('.sidenav');
+            M.Sidenav.init(sidenav);
+        });
+    </script>
+</html>

@@ -1,0 +1,593 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <title>Order Online</title>
+
+    <style>
+.collection-section {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  
+  .card-image img {
+    height: 300px; 
+    object-fit: cover;
+  }
+  
+  .card-content {
+    text-align: center;
+  }
+  
+  .card-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .btn-floating {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+  
+  .card-image {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card-image:hover {
+    transform: scale(1.05);}
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    background: url(online/bg.jpg);
+    background-size: cover; 
+    background-position: center center; 
+    background-repeat: no-repeat; 
+    height: 100vh; 
+    overflow-x: hidden;
+}
+
+.section h2, .section p, .section a {
+  text-align: center;
+}
+
+.section .btn {
+  background-color: pink ; 
+  color: white;
+}
+
+.section img {
+  display: block;
+  margin: 0 auto;
+}
+
+.section a.btn {
+  margin: 0 auto; 
+  display: block; 
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+.order-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.product-catalog {
+    width: 60%;
+}
+
+.product {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.product img {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-details h3 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.product-details p {
+    margin: 5px 0;
+}
+
+button {
+    background-color: pink;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: pink;
+}
+
+.order-summary {
+    width: 30%;
+    background-color: pink;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+    font-size: 1.5em;
+}
+
+label {
+    margin-right: 10px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+.checkout-btn {
+    background-color: #d00000;
+    color: white;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.checkout-btn:hover {
+    background-color: #d00000;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.social-media-links a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.social-media-links a:hover {
+    text-decoration: underline;
+}
+
+        .step-card {
+            margin: 20px 0;
+        }
+        .card-content {
+            font-size: 1.2em;
+        }
+
+        form {
+  background-color: pink;
+  padding: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: pink;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.order-container {
+    background-image: url(online/parallax.jpg);
+    background-attachment: fixed;  
+    background-position: center center;  
+    background-repeat: no-repeat;
+    background-size: cover;  
+    padding: 50px 0;  
+}
+
+.product-catalog {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.product {
+    display: inline-block;
+    width: 30%;
+    margin: 20px;
+    text-align: center;
+    background-color: pink; 
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.product img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.product-details h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.product-details p {
+    font-size: 1.1em;
+}
+
+button {
+    background-color: pink;  
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color:#d00000;  
+}
+  </style>
+
+</head>
+
+<link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Sofia&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=GFS+Didot&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Sofia&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+
+    <header>
+      <nav class="nav-wrapper red lighten-4" >
+          <div class="container center">
+              <a href="index.html" class="brand-logo" style="display: flex; align-items: center;">
+                  <img src="img/donut.png" alt="Iris & Glaze Donuts" style="height: 60px; width: auto; margin-left: 100px; margin-right: 10px;">
+                  <span style="font-family: 'Playfair Display', cursive; font-size: 2rem; color: #d00000;">IrisGlaze</span>
+                </a>
+  
+              <a href="#" class="sidenav-trigger" data-target="mobile-menu">
+                  <i class="material-icons">menu</i>
+              </a>
+              
+              <ul class="right hide-on-med-and-down" style="font-family: 'Playfair Display', cursive; font-size: 2rem;">
+        
+                  <li><a style="color: #d00000;" href="menu.html" class="Menu">Menu</a></li>
+                  <li><a style="color: #d00000;" href="blog.html">Blog</a></li>
+                  <li><a style="color: #d00000;" href="Sevices.html">Services</a></li>
+                  <li><a href="OnOrders.html" class="tooltipped btn-floating btn-small transparent" data-tooltip="Get Your Donut!">
+                      <i style="color:#d00000" class="material-icons prefix">shopping_cart_checkout</i>
+                  </a></li>
+                  <li><a href="https://www.instagram.com/hell_irisss/?next=%2F" class="tooltipped btn-floating btn-small transparent" data-tooltip="Instagram">
+                      <i style="color: #d00000;" class="fab fa-instagram"></i>
+                  </a></li>
+                  <li><a href="https://www.facebook.com/hellaena.villanuevatacud?mibextid=ZbWKwL" class="tooltipped btn-floating btn-small transparent" data-tooltip="Facebook">
+                      <i style="color: #d00000;" class="fab fa-facebook"></i>
+                  </a></li>
+              </ul>
+              <ul class="sidenav pink lighten-2" id="mobile-menu">
+                  <li><a style="color: white; font-family: Quicksand;" href="index.html">Back to the Bakery</a></li>
+                  <li><a style="color:white; font-family: Quicksand;" href="menu.html">Menu</a></li>
+                  <li><a style="color: white; font-family: Quicksand;" href="blog.html">Blog</a></li>
+                  <li><a style="color: white; font-family: Quicksand;" href="Sevices.html">Services</a></li>
+                  <li><a style="color: white; font-family: Quicksand;" href="OnOrders.html">Order Online</a></li>
+              </ul>
+          </div>
+      </nav>
+  </header>
+
+  <body>
+    <section class="section">
+      <div class="row">
+        <div class="col s12 m6">
+          <br><br><h2 style="font-family: 'Playfair Display', cursive; font-weight: bold; color: black;">Welcome to IrisGlaze– Where every bite is a sweet delight!</h2>
+          <br><br><h5 style="align-items: center; font-family: Quicksand;">Craving something sweet? Order now and indulge in happiness!</h5>
+          <br><br><a style="align-items: center; font-family: Quicksand;" href="menu.html" class="waves-effect waves-light btn  pink lighten-3">The Menu</a>
+        </div>
+        <div class="col s12 m6">
+          <img src="online/DALL·E 2024-12-08 17.25.58 - A visually appealing design for a donut shop showcasing various services. The color theme is a blend of soft pink and light red. The design includes d.jpg" alt="bg">
+      </div>
+    </section>
+
+    <!-- services / tabs -->
+    <div class="container section scrollspy" id="services">
+      <div class="row">
+          <div class="col s12 l6">
+              <h3 style="font-family: 'Playfair Display'; align-items: center, cursive; color: black;">How to Order Online - It's as Sweet as Your Donuts!
+              </h3>
+              <p style="align-items:self-start; font-family: Quicksand;"><b>1. Check the Menu</b>
+                <br>Explore our delicious selection of donuts – we’ve got something for every craving!
+                <br>
+                <b>2. Fill Up Your Customer Information</b>
+                <br>Tell us your name and contact details so we can keep you updated on your order.
+                <br>
+                <b>3. Add to Cart What You Like</b>
+                <br>Select the donuts you love, and they’ll be added to your cart.
+                <br>
+                <b>4. Check the Order Summary</b>
+                <br>Take a quick look at what you’ve chosen and make sure everything is perfect!
+                <br>
+                <b>5. Choose Delivery or Pickup</b>
+                <br>Decide whether you want your donuts delivered to your door or if you'd prefer to pick them up.
+                <br>
+                <b>6. Payment</b>
+                <br>Securely complete your payment – we accept all major methods.
+                <br>
+                <b>7. Wait for Your Donuts</b>
+                <br>Sit back, relax, and wait for the sweet smell of your fresh donuts to arrive!
+                <br>
+                <b>8. Don’t Forget to Enjoy It! </b> 
+                <br>Take a bite, smile, and savor every moment of your donut delight!</p>
+              
+          </div>
+          <br><br><div class="col s12 l4 offset-l2">
+              <ul class="tabs">
+                  <li class="tab col s6">
+                      <a href="#photography" style="font-family: 'Playfair Display'; font-weight:bold;  align-items: center, cursive; color:#d00000;">Delivery</a>
+                  </li>
+                  <li class="tab col s6">
+                      <a href="#editing"style="font-family: 'Playfair Display'; font-weight:bold;  align-items: center; cursive; color:#d00000;">Pick-Up</a>
+                  </li>
+              </ul>
+              <div class="col s12" id="photography">
+                  <p style="font-family: 'Playfair Display'; font-weight:bold;  align-items: center, cursive; color:#d00000;">Delivery</p>
+                  <p style="align-items:self-start; font-family: Quicksand;">Get your donuts delivered right to your door with fast and convenient service. Just place your order, and we'll bring the sweetness to you!</p>
+              </div>
+              <div class="col s12" id="editing">
+                  <p style="font-family: 'Playfair Display'; font-weight:bold;  align-items: center, cursive; color:#d00000;">Pick-Up</p>
+                  <p style="align-items:self-start; font-family: Quicksand;">Prefer to grab your donuts yourself? Choose pickup and swing by our shop to collect your freshly made donuts at your convenience.</p>
+              </div>
+          </div>
+      </div>
+
+  
+  </div>
+
+  <!-- Step 1: Customer Info -->
+  <form>
+    <h2 style="align-items:self-start; font-weight:bold; font-family: Quicksand;">Fill Up Your Customer Information</h2>
+    <p style="align-items:self-start; font-family: Quicksand;">Tell us your name and contact details so we can keep you updated on your order.</p>
+  
+    <label style="align-items:self-start; font-family: Quicksand;" for="name">Your Name:</label>
+    <input type="text" id="name" name="name" required>
+  
+    <label style="align-items:self-start; font-family: Quicksand;" for="email">Your Email:</label>
+    <input type="email" id="email" name="email" required>
+  
+    <button style="align-items:self-start; font-weight:bold; font-family: Quicksand;" class="waves-effect waves-light btn  pink lighten-3" type="submit">Submit</button>
+  </form>
+
+  <section class="order-container">
+    <div class="product-catalog">
+        <h2 style="font-family: 'Playfair Display'; font-weight:bold;  align-items: center, cursive; color:#d00000;">Our Donuts</h2>
+        <div class="product">
+            <img src="menu/Special4.png" alt="Chocolate Glazed Donut">
+            <div class="product-details">
+                <h3 style="align-items:self-start; font-family: Quicksand;"><b>Kookies&Kream</b></h3>
+                <p style="align-items:self-start; font-family: Quicksand;">Rich sugary glaze with a soft, fluffy center.</p>
+                <p style="align-items:self-start; font-family: Quicksand;"><b> Php 130.00</b></p>
+                <button onclick="addToCart('Kookies&Kream', 130)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+          <img src="menu/caramel.png" alt="Chocolate Glazed Donut">
+          <div class="product-details">
+              <h3 style="align-items:self-start; font-family: Quicksand;"><b>Magic caramel</b></h3>
+              <p style="align-items:self-start; font-family: Quicksand;">Rich sugary glaze with a soft, fluffy center.</p>
+              <p style="align-items:self-start; font-family: Quicksand;"><b> Php 120.00</b></p>
+              <button onclick="addToCart('Magic Caramel', 120)">Add to Cart</button>
+          </div>
+      </div>
+        
+      <div class="product">
+        <img src="menu/choco3.png" alt="Chocolate Glazed Donut">
+        <div class="product-details">
+            <h3 style="align-items:self-start; font-family: Quicksand;"><b>Chocoluxe</b></h3>
+            <p style="align-items:self-start; font-family: Quicksand;">Rich sugary glaze with a soft, fluffy center.</p>
+            <p style="align-items:self-start; font-family: Quicksand;"><b> Php 130.00</b></p>
+            <button onclick="addToCart('Chocoluxe', 130)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="product">
+      <img src="menu/golden.png" alt="Chocolate Glazed Donut">
+      <div class="product-details">
+          <h3 style="align-items:self-start; font-family: Quicksand;"><b>Golden Glaze</b></h3>
+          <p style="align-items:self-start; font-family: Quicksand;">Rich sugary glaze with a soft, fluffy center.</p>
+          <p style="align-items:self-start; font-family: Quicksand;"><b> Php 120.00</b></p>
+          <button onclick="addToCart('Golden Glaze', 120)">Add to Cart</button>
+      </div>
+  </div>
+    </div>
+
+    <div class="order-summary">
+        <h2 style="font-family: 'Playfair Display'; font-weight:bold;  align-items: center, cursive; color:#d00000;">Order Summary</h2>
+        <div id="cart-summary">
+            <p style="align-items:self-start; font-family: Quicksand;">Your cart is empty.</p>
+        </div>
+
+        <div style="background-color: transparent; box-shadow: none;" class="card step-card">
+          <div class="card-content">
+              <span style="font-family: 'Playfair Display'; font-weight:bold;  align-items: center, cursive; color:#d00000;" class="card-title">Delivery or Pickup</span>
+              <p style="align-items:self-start; font-family: Quicksand;">Decide whether you want your donuts delivered to your door or if you'd prefer to pick them up.</p>
+              <p>
+                  <label>
+                      <input name="delivery-option" type="radio" />
+                      <span style="align-items:self-start; font-family: Quicksand;">Pickup</span>
+                  </label>
+                  <label>
+                      <input style="color: #d00000;" name="delivery-option" type="radio" />
+                      <span style="align-items:self-start; font-family: Quicksand;">Delivery</span>
+                  </label>
+              </p>
+          </div>
+      </div>
+        
+      <div class="card-content">
+        <span style="font-family: 'Playfair Display'; font-weight:bold;  align-items: center, cursive; color:#d00000;" class="card-title">Payment</span>
+        <p style="align-items:self-start; font-family: Quicksand;">Securely complete your payment – we accept all major methods.</p>
+        <p>
+            <label>
+                <input name="payment-method" type="radio" />
+                <span style="align-items:self-start; font-family: Quicksand;">Credit Card</span>
+            </label>
+            <label>
+                <input name="payment-method" type="radio" />
+                <span style="align-items:self-start; font-family: Quicksand;">Gcash</span>
+            </label>
+        </p>
+        <button style="align-items:self-start; font-family: Quicksand;" class="checkout-btn" onclick="checkout()">Checkout</button>
+    </div>
+       
+</section>
+  
+
+</div>
+
+<footer style= "background-color: pink;">
+    <div style= "background-color: pink;" class="container">
+        <p style="align-items:self-start; color:black; font-family: Quicksand;" >Follow us on social media for updates and promotions!</p>
+        <div class="social-media-links">
+            <a style="align-items:self-start; color:black; font-family: Quicksand;" href="https://www.facebook.com/hellaena.villanuevatacud?mibextid=ZbWKwL">Facebook</a>
+            <a style="align-items:self-start; color:black; font-family: Quicksand;" href="https://www.instagram.com/hell_irisss/?next=%2F">Instagram</a>
+            <a style="align-items:self-start; color:black; font-family: Quicksand;" href="#">Twitter</a>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+
+
+<script src="js/jquery.js"></script>
+<script src="js/materialize.min.js"></script>
+<script>
+  $('.parallax').parallax();
+  $('.tooltipped').tooltip();
+  $('.scrollspy').scrollSpy();
+  let cart = [];
+
+  function addToCart(name, price) {
+    cart.push({ name, price });
+    updateCartSummary();
+}
+
+function updateCartSummary() {
+    const cartSummary = document.getElementById('cart-summary');
+    if (cart.length === 0) {
+        cartSummary.innerHTML = "<p>Your cart is empty.</p>";
+    } else {
+        let summaryHTML = "<ul>";
+        let total = 0;
+        cart.forEach(item => {
+            summaryHTML += `<li>${item.name} - ₱${item.price.toFixed(2)}</li>`; 
+            total += item.price;
+        });
+        summaryHTML += `</ul><p>Total: ₱${total.toFixed(2)}</p>`; 
+        cartSummary.innerHTML = summaryHTML;
+    }
+}
+
+function checkout() {
+    if (cart.length === 0) {
+        alert("Your cart is empty! Please add some donuts to your order.");
+        return;
+    }
+    alert("Proceeding to checkout...");
+   
+}
+$('.slider').slider();
+        $ (document).ready(function(){
+            $('.sidenav').sidenav();
+            $('.materialboxed').materialbox();
+            $('.parallax').parallax();
+            $('.tabs').tabs();
+            $('.datepicker').datepicker({
+                disableWeekends: true
+            });
+            $('.tooltipped').tooltip();
+            $('.scrollspy').scrollSpy();
+            $('animated-text').classList.add('show');
+        });
+    </script>
+
+    <script>
+    
+      window.onload = () => {
+        setTimeout(() => {
+          document.getElementById('animated-text').classList.add('show');
+        }, 1000); 
+      };
+    </script>
+   
+   <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const backToTopButton = document.getElementById('back-to-top');
+  
+      
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 200) {
+          backToTopButton.style.display = 'block';
+        } else {
+          backToTopButton.style.display = 'none';
+        }
+      });
+  
+     
+      backToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth' 
+        });
+      });
+    });
+
+    $(document).ready(function(){
+            $('select').formSelect();
+            $('input[name="delivery-option"]').on('change', function() {
+                console.log("Delivery or Pickup selected");
+            });
+        });
+</script>
+</html>

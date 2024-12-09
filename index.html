@@ -1,0 +1,492 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <title>IrisGlaze</title>
+    <style>
+        header{
+            background: url(img/penk.jpg);
+            background-size: cover;
+            background-position: center;
+            min-height: 1000px;
+        }
+       
+        .section {
+            padding-top: 4vw;
+            padding-bottom: 4vw;
+        }
+        .tabs .indicator{
+            background-color: #1a237e;
+        }
+        .slider .indicators .indicator-item {
+  background-color:  #ffd8d9; 
+}
+
+
+.slider .indicators .indicator-item.active {
+  background-color: #d00000; 
+}
+
+.card {
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    padding: 20px; 
+    transition: box-shadow 0.3s ease; 
+  } 
+
+.card:hover {
+    background-color: #f8f8f8; 
+    box-shadow: 0 8px 15px #e44f4f; 
+    cursor: pointer; 
+    }
+
+    .card-image img {
+  filter: brightness(0.7); 
+}
+
+.card-content h4,
+.card-content h5 {
+  margin: auto;
+}
+
+.card-content a {
+  margin-top: 10px;
+}
+    .animated-text {
+      opacity: 8;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 3s ease;
+    }
+
+    .animated-text.show {
+      opacity: 5;
+      transform: translateY(0);
+    }
+
+    .animated-text{
+      text-align: center;
+      padding: 50px;
+    }
+      
+.photo-section {
+  margin-bottom: 4rem;
+  overflow: hidden;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeIn 1s ease-in forwards;
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(30px);
+  animation: fadeInRight 1s ease-in forwards;
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: fadeInLeft 1s ease-in forwards;
+}
+
+
+.hoverable {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hoverable:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px #d43232;
+}
+
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .right-align {
+    text-align: left !important;
+  }
+  .photo-section {
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 670px){
+            header {
+                min-height: 500px;
+            }
+        }
+
+        #back-to-top {
+      position: fixed;
+      bottom: 20px; 
+      left: 50%;
+      transform: translateX(-50%); 
+      display: none; 
+      z-index: 1000; 
+    }
+    body {
+      height: 2000px; 
+    }
+   .pusa{
+    z-index: 9999;
+   }
+    </style>
+
+</head>
+
+<link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Sofia&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=GFS+Didot&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Sofia&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+
+<body>
+  
+
+<header>
+    <nav class="nav-wrapper transparent">
+      <div class="container center">
+        <a href="index.html" class="brand-logo" style="display: flex; align-items: center;">
+            <img src="img/donut.png" alt="Iris & Glaze Donuts" style="height: 60px; width: auto; margin-left: 10px; margin-right:10px;">
+            <span style="font-family: 'Playfair Display', cursive; font-size: 2rem; color: #d00000;">IrisGlaze</span>
+          </a>
+
+        <a href="#" class="sidenav-trigger" data-target="mobile-menu">
+            <i class="material-icons">menu</i>
+        </a>
+            
+            <ul class="right hide-on-med-and-down" style="font-family: 'Playfair Display', cursive; font-size: 2rem;">
+      
+                <li><a style="color: #d00000;" href="menu.html" class="Menu">Menu</a></li>
+                <li><a style="color: #d00000;" href="blog.html">Blog</a></li>
+                <li><a style="color: #d00000;" href="Sevices.html">Services</a></li>
+                <li><a href="OnOrders.html" class="tooltipped btn-floating btn-small transparent" data-tooltip="Get Your Donut!">
+                    <i style="color:#d00000" class="material-icons prefix">shopping_cart_checkout</i>
+                </a></li>
+                <li><a href="https://www.instagram.com/hell_irisss/?next=%2F" class="tooltipped btn-floating btn-small transparent" data-tooltip="Instagram">
+                    <i style="color: #d00000;" class="fab fa-instagram"></i>
+                </a></li>
+                <li><a href="https://www.facebook.com/hellaena.villanuevatacud?mibextid=ZbWKwL" class="tooltipped btn-floating btn-small transparent" data-tooltip="Facebook">
+                    <i style="color: #d00000;" class="fab fa-facebook"></i>
+                </a></li>
+            </ul>
+            <ul class="sidenav pink lighten-2" id="mobile-menu">
+                <li><a style="color: white; font-family: Quicksand;" href="menu.html">Menu</a></li>
+                <li><a style="color: white; font-family: Quicksand;" href="blog.html">Blog</a></li>
+                <li><a style="color: white; font-family: Quicksand;" href="Sevices.html">Services</a></li>
+                <li><a style="color: white; font-family: Quicksand;" href="OnOrders.html">Order Online</a></li>
+            </ul>
+        </div>
+    </nav>
+
+      <div class="slider">
+        <ul class="slides purple lighten-3">
+          <li>
+            <img src="img/background.jpg" class="pusa">
+            <div class="caption center-align">
+                <h2 style="font-family: 'Playfair Display', cursive; color: #d00000;"><br> Take A Sweet Stop at Iris & Glaze</h2>
+                <h5 style="color: #d43232;">Experience a World of Delicious Donuts</h5>
+                <h6 style="font-family: 'Quicksand', cursive; color:black;">Step into our donut haven, where every bite is a sweet adventure! The warm colors, the scent of freshly baked donuts,<br>
+                     and the joyful atmosphere will make you feel right at home. Whether you’re here to indulge in our signature flavors, sip on a coffee, or just take a moment to relax, Iris & Glaze is the perfect place to unwind. Our cozy space is filled with the laughter of friends, the hum of creative energy, and the irresistible aroma of sugary delights. Come for the donuts, stay for the vibes—your perfect donut experience awaits!</h6>
+            </div>
+          </li>
+
+          <li>
+            <img src="img/background1.jpg" class="pusa">
+            <div class="caption left-align">
+                    <h2 style="font-family: 'Playfair Display', cursive; color: #d00000;">Discover Bliss at Iris & Glaze</h2>
+                    <h5 style="color: #d43232;">Where Donuts and Dreams Collide</h5>
+                    <h6 style="font-family: 'Quicksand', cursive; color:black;">Welcome to a sweet escape like no other! At Iris & Glaze, every donut is a handcrafted masterpiece, bursting with flavors that transport you to your happy place. From the vibrant colors of our frosting to the comforting aroma of freshly brewed coffee, every detail is designed to spark joy.
+
+                        Pull up a seat, savor our signature treats, and let the world fade away as you indulge in sweet serenity. Whether it’s a quick pick-me-up or a long chat with friends, our warm and playful space is here to make your day brighter. Donut just think about it—treat yourself to the magic of Iris & Glaze today!</h6>
+                </div>
+          </li>
+          
+          <li>
+            <img src="img/background2.jpg" class="pusa">
+            <div class="caption right-align">
+                <h2 style="font-family: 'Playfair Display', cursive; color: #d00000;">Sweeten Your Day at Iris & Glaze</h2>
+                <h5 style="color: #d43232;">Where Every Bite is Pure Joy</h5>
+                <h6 style="font-family: 'Quicksand', cursive; color:black;">Step into a world of whimsy and wonder at Iris & Glaze! Our donuts aren’t just desserts—they’re little circles of happiness, made fresh with love and bursting with flavor. From the softest dough to the most luscious glazes, every treat is crafted to perfection.
+
+                    Stay a while, sip on your favorite brew, and soak in the playful, cozy vibes of our space. Whether you’re here for a morning pick-me-up, a mid-day treat, or an evening indulgence, Iris & Glaze is the place to let your sweet tooth run wild. Life is better with sprinkles—come see why at Iris & Glaze!</h6>
+            </div>
+        </ul>
+      </div>
+    
+      <br><br><section style="font-family: 'Playfair Display', cursive; color: #d00000;" class="description center-align">
+        <h3 id="animated-text" class="animated-text">The ultimate spot to satisfy your cravings for both sweet treats and refreshing drinks.</h3>
+    </section>
+     
+      <br><br><br><div class="container  opacity: 0.5;x center-align" >
+        <div class="row">
+          <!-- Card 1 -->
+          <div class="col s12 m4">
+            <div class="card">
+                <div class="card hoverable">
+              <div class="card-content">
+                <!-- Icon inside card -->
+                <i  style="color:#ffd8d9" class="material-icons large">local_fire_department</i>
+                <span style="font-family: 'Playfair Display'; color: #d00000;" class="card-title">Freshly Baked Donuts</span>
+                <p>Every day, we bake a variety of delicious donuts.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+          
+          <!-- Card 2 -->
+          <div class="col s12 m4">
+            <div class="card">
+                <div class="card hoverable">
+              <div class="card-content">
+
+                <!-- Icon inside card -->
+                <i  style="color:#ffd8d9" class="material-icons large">local_shipping</i>
+                <span style="font-family: 'Playfair Display'; color:#d00000" class="card-title">Fast Delivery</span>
+                <p>We deliver your donuts right to your door, hot and fresh.</p>
+              </div>
+            </div>
+          </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col s12 m4">
+            <div class="card">
+                <div class="card hoverable">
+              <div class="card-content">
+
+                <!-- Icon inside card -->
+                <i  style="color:#ffd8d9" class="material-icons large">shopping_basket</i>
+                <span style="font-family: 'Playfair Display'; color:#d00000" class="card-title">High-Quality Ingredients</span>
+                <p>We use only the finest ingredients to make our donuts.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</header>
+
+<!-- parallax -->
+
+<div style="height: 300px;" class="parallax-container">
+    <div style=" font-family: 'Abril Fatface'; font-size: larger; color:#d00000" class="parallax-text center-align">
+      <h1>Special Offer</h1>
+      <h3>Get 50% Discount</h3>
+      <li><a style="color:#d00000" class="waves-effect waves-light btn  pink lighten-3" href="OnOrders.html">Shop Now</a></li>
+    </div>
+    <!-- Parallax Image -->
+<div class="parallax">
+  <img src="img/offer.jpg" alt="Parallax Background">
+</div>
+</div>
+
+    <!-- photo / grid -->
+    <section class="container section scrollspy" id="photos">
+      <div class="row photo-section">
+        <div class="col s12 l4">
+          <img src="img/dutch.jpg" alt="HISTO" class="responsive-img materialbox hoverable fade-in prefix">
+        </div>
+        <div class="col s12 l6 offset-l1 fade-in-right">
+          <h2 style="font-family: 'Playfair Display'; color:#d00000">Dutch immigrants</h2>
+          <p>In the 17th and 18th centuries, Dutch immigrants brought <b>fried dough balls called olie koeken or olykoeks to New York.</b>  These dough balls were similar to modern donuts, but they didn't have the iconic ring shape. 
+          </p>
+        </div>
+      </div>
+    
+      <div class="row photo-section">
+        <div class="col s12 l4 push-l7 offset-l1 fade-in-left">
+          <img src="img/histo1.webp" alt="HISTO" class="responsive-img materialbox hoverable fade-in">
+        </div>
+        <div class="col s5 l6 pull-l4 right-align fade-in">
+          <h2 style="font-family: 'Playfair Display'; color:#d00000">The word "doughnut"</h2>
+          <p>The word "doughnut" is generally agreed to have originated with writer <b> Washington Irving's </b> 1809 book A History of New York. 
+          </p>
+        </div>
+      </div>
+    
+      <div class="row photo-section">
+        <div class="col s12 l4">
+          <img src="img/histo3.jpg" alt="HISTO" class="responsive-img materialbox hoverable fade-in">
+        </div>
+        <div class="col s12 l6 fade-in-right">
+          <h2 style=" font-family: 'Playfair Dsiplay'; color:#d00000">The modern donut</h2>
+          <p>The modern donut likely originated in <b>19th century America.</b> 
+            Donut franchises.
+            In the <b>1940s and 1950s,</b> donut franchises like Dunkin' Donuts and Krispy Kreme introduced mass-produced donuts. 
+            Doughnut flavors, shapes, and toppings
+            Over the years, donuts have evolved to include a wide variety of flavors, shapes, and toppings. 
+            </p>
+        </div>
+      </div>>
+    </section>
+    
+    
+ <!-- parallax -->
+
+<div style="height: 1000px;" class="parallax-container">
+  <div class="parallax-text center-align">
+    <div id="ourProjectss" class="section scrollspy">
+      <div class="container">
+      	<h1  style=" font-family: 'Playfair Dsiplay'; color:#d00000" class="ourProjects" >Our Top Flavors</h1>
+      	<br>
+      	<br>
+
+        <div class="row">
+      		<div class="col s12 m3">
+      			<ul class="demo-3">
+			    <li>
+            <div style="margin: auto" class="content">
+              <img class="responsive-img materialbox prefix" src="img/loop.png" alt="Overlay" class="overlay-image">
+          </div>
+			    </li>
+			</ul>
+	      </div>
+
+      	<div class="row">
+      		<div class="col s12 m3">
+      			<ul class="transparent">
+			    <li>
+            <div style="margin: auto" class="content">
+              <img class="responsive-img materialbox prefix" src="img/berry.png" alt="Overlay" class="overlay-image">
+          </div>
+			    </li>
+			</ul>
+	      </div>
+
+        <div class="row">
+      		<div class="col s12 m3">
+      			<ul class="demo-3">
+			    <li>
+            <div style="margin: auto" class="content">
+              <img class="responsive-img materialbox prefix" src="img/golden glaze.png" alt="Overlay" class="overlay-image">
+          </div>
+			    </li>
+			</ul>
+	      </div>
+
+        <div class="row">
+      		<div class="col s12 m3">
+      			<ul class="demo-3">
+			    <li>
+            <div style="margin: auto" class="content">
+              <img class="responsive-img materialbox prefix" src="img/k&k.png" alt="Overlay" class="overlay-image">
+          </div>
+			    </li>
+			</ul>
+	      </div>
+
+
+    <div class="container center-align">
+      <div class="row">
+          <div class="col s12 m4">
+            <h3 style=" font-family: 'Playfair'; color:#d00000" class="header">Pages</h3>
+              <ul style=" font-family: 'QUICKSAND'; font-size: large; color: black">
+                  <li><a style=" color:#e44f4f" href="menu.html">Back to the Bakery</a></li>
+                  <li><a style=" color:#e44f4f" href="blog.html">Delight Stories</a></li>
+                  <li><a style=" color:#e44f4f" href="Sevices.html">Talk to the Baker</a></li>
+                  <li><a style=" color:#e44f4f" href="OnOrders.html">Get Your Donut</a></li>
+              </ul>
+          </div>
+
+          <div class="col s8 m4 center">
+            <h3 style=" font-family: 'Playfair'; color:#d00000" class="header">Opening Hours</h3>
+            <ul style=" font-family: 'QUICKSAND'; font-size: large; color: black">
+                <li>Monday - Friday</li>
+                <li>9:00am - 10:00pm</li>
+            </ul>
+        </div>
+        
+          <div class="col s12 m4">
+            <h3  style=" font-family: 'Playfair'; color:#d00000" class="header">Menu</h3>
+            <ul style=" font-family: 'QUICKSAND'; font-size: large; color: black">
+              <li>Classic Favorites</li>
+              <li>Chocolate Lovers</li>
+              <li>Fruity Treats</li>
+              <li>Creative Flavors</li>
+              <li>Specialty Donuts</li>
+            </ul>
+        </div>
+
+        
+    </div>
+  <a id="back-to-top" class="center-align btn-floating btn-large waves-effect waves-light red lighten">
+    <i class="material-icons">arrow_upward</i>
+  </a>
+  <!-- Parallax Image -->
+<div class="parallax">
+<img src="img/WALLAPAPER.jpg" alt="Parallax Background">
+</div>
+</div>
+        
+
+    <script src="js/jquery.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script>
+        $ (document).ready(function(){
+            $('.sidenav').sidenav();
+            $('.slider').slider();
+            $('.materialboxed').materialbox();
+            $('.parallax').parallax();
+            $('.tabs').tabs();
+            $('.datepicker').datepicker({
+                disableWeekends: true
+            });
+            $('.tooltipped').tooltip();
+            $('.scrollspy').scrollSpy();
+            $('animated-text').classList.add('show');
+        });
+
+
+      window.onload = () => {
+        setTimeout(() => {
+          document.getElementById('animated-text').classList.add('show');
+        }, 1000); 
+      };
+   
+    document.addEventListener('DOMContentLoaded'), function () {
+      const backToTopButton = document.getElementById('back-to-top');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 200) {
+          backToTopButton.style.display = 'block';
+        } else {
+          backToTopButton.style.display = 'none';
+        }
+      });
+  
+      backToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth' 
+      });
+    });}
+  </script>
+  
+</body>
+</html>

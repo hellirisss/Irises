@@ -1,0 +1,491 @@
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Sofia&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=GFS+Didot&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Sofia&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+
+    <title>Menu</title>
+
+    <style>
+
+.tabs .indicator {
+      background-color: #d00000 
+    }
+
+    .tab{
+      justify-content: center;
+    }
+    body{
+            background: url(img/bg.jpg);
+            background-size: cover;
+            background-position: center;
+            min-height: 1000px;
+        }
+       
+        .transparent-card {
+    background: rgba(255, 255, 255, 0); 
+    border: none; 
+    box-shadow: none;
+  }
+
+  .visible {
+      opacity: 1; 
+      transform: translateY(0); 
+    }
+
+
+    .image{
+    animation: fadeIn 1s ease in;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+img:active {
+  animation: spin 1s ease-in-out; 
+}
+
+@keyframes spin {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+.fruit-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.quote {
+  font-family: 'Playfair Display', cursive;
+  font-weight: 400;
+  color: #d00000;
+  margin-bottom: 20px;
+}
+
+
+.fruit-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px; 
+}
+
+
+
+.fruit-card {
+  flex: 0 0 calc(33.33% - 20px); 
+  max-width: calc(33.33% - 20px); 
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  overflow: hidden; 
+}
+
+.fruit-card img {
+  max-width: 100%; 
+  width: 80%; 
+  object-fit: cover; 
+}
+
+@media (max-width: 992px) {
+  .fruit-card {
+    flex: 0 0 calc(50% - 20px); 
+  }
+}
+
+@media (max-width: 600px) {
+  .fruit-card {
+    flex: 0 0 100%; 
+  }
+}
+
+.card-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.quote {
+  font-family: 'Playfair Display', cursive;
+  font-weight: 400;
+  color: #d00000;
+  margin-bottom: 20px;
+}
+
+
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px; 
+}
+
+.card .ChocoLov {
+  flex: 0 0 calc(33.33% - 20px); 
+  max-width: calc(33.33% - 20px); 
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  overflow: hidden; 
+}
+
+.card {
+  max-width: 100%; 
+  width: 80%; 
+  object-fit: cover; 
+}
+
+@media (max-width: 992px) {
+  .card {
+    flex: 0 0 calc(50% - 20px); 
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    flex: 0 0 100%; 
+  }
+}
+
+    </style>
+    
+    <nav class="nav-wrapper red lighten-4" >
+      <nav class="nav-wrapper transparent">
+        <div class="container">
+          <a href="index.html" class="brand-logo" style="display: flex; align-items: center;">
+              <img src="img/donut.png" alt="Iris & Glaze Donuts" style="height: 60px; width: auto; margin-left: 100px; margin-right: 10px;">
+              <span href="/indexko.html" style="font-family: 'Playfair Display', cursive; font-size: 2rem; color: #d00000;">IrisGlaze</span>
+            </a>
+        
+
+            <a href="#" class="sidenav-trigger" data-target="mobile-menu">
+                <i class="material-icons">menu</i>
+            </a>
+            
+            <ul class="right hide-on-med-and-down" style="font-family: 'Playfair Display', cursive; font-size: 2rem;">
+      
+                <li><a style="color: #d00000;" href="menu.html" class="Menu">Menu</a></li>
+                <li><a style="color: #d00000;" href="blog.html">Blog</a></li>
+                <li><a style="color: #d00000;" href="Sevices.html">Services</a></li>
+                <li><a href="OnOrders.html" class="tooltipped btn-floating btn-small transparent" data-tooltip="Get Your Donut!">
+                    <i style="color:#d00000" class="material-icons prefix">shopping_cart_checkout</i>
+                </a></li>
+                <li><a href="https://www.instagram.com/hell_irisss/?next=%2F" class="tooltipped btn-floating btn-small transparent" data-tooltip="Instagram">
+                    <i style="color: #d00000;" class="fab fa-instagram"></i>
+                </a></li>
+                <li><a href="https://www.facebook.com/hellaena.villanuevatacud?mibextid=ZbWKwL" class="tooltipped btn-floating btn-small transparent" data-tooltip="Facebook">
+                    <i style="color: #d00000;" class="fab fa-facebook"></i>
+                </a></li>
+            </ul>
+            <ul class="sidenav pink lighten-2" id="mobile-menu">
+              <li><a style="color: white; font-family: Quicksand;" href="index.html">Back to the Bakery</a></li>
+              <li><a style="color: white; font-family: Quicksand;" href="menu.html">Menu</a></li>
+              <li><a style="color: white; font-family: Quicksand;" href="blog.html">Blog</a></li>
+              <li><a style="color: white; font-family: Quicksand;" href="Sevices.html">Services</a></li>
+              <li><a style="color: white; font-family: Quicksand;" href="OnOrders.html">Order Online</a></li>
+          </ul>
+        </div>
+    </nav>
+ </head>
+
+    <body>
+      <div class="container" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <!-- Tabs Navigation -->
+        <ul class="tabs transparent" style="font-family: 'Playfair Display', cursive; font-weight: 400; color: #d00000; display: flex; justify-content: center; flex-wrap: wrap;">
+          <li class="tab col s5" style="margin: 0 10px;">
+            <a class="active" href="#ClassicFavs">Classic Favorites</a>
+          </li>
+          <li class="tab col s5" style="margin: 0 10px;">
+            <a class="active" href="#ChocoLov">Chocolate Lovers</a>
+          </li>
+          <li class="tab col s5" style="margin: 0 10px;">
+            <a class="active" href="#Fruitreats">Fruity Treats</a>
+          </li>
+          <li class="tab col s5" style="margin: 0 10px;">
+            <a class="active" href="#Specialty">Specialty Donuts</a>
+          </li>
+        </ul>
+      </div>
+
+
+             <br> <div class="container">
+                <div id="ClassicFavs" class="row">
+                  <h3 style="font-family: 'Playfair Display', cursive; font-weight:400; color: #d00000;" class="center-align" > "Classic favorites, timeless flavor: because some things are simply too good to change."</h3>
+                  <br><div class="col s2 m4 14">
+                    <div class="card transparent-card">
+                      <div class="card-image">
+                        <img src="menu/blue.png" alt="Image 1">
+                      </div>
+                      <div class="card-content">
+                        <h3 style="font-family: 'Playfair Display', cursive; font-weight:400; text-align: center; color: black">Php 120.00</h3>
+                        <p style="font-family: 'Quicksand', cursive; text-align: center; line-height: 1.5; color: black; ">A light, airy, and often coated in a sweet that melts in your mouth. </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col s2 m4 14">
+                    <div class="card transparent-card">
+                      <div class="card-image">
+                        <img src="menu/caramel.png" alt="Image 2">
+                      </div>
+                      <div class="card-content">
+                        <h3 style="font-family: 'Playfair Display', cursive; font-weight:400; text-align: center; color: black;">Php 120.00</h3>
+                        <p style="font-family: 'Quicksand', cursive; font-weight:400; text-align: center; line-height: 1.5; color: black; ">Featuring a soft, coated in a sweet, gooey caramel glaze.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col s2 m4 14">
+                    <div class="card transparent-card">
+                      <div class="card-image">
+                        <img src="menu/golden.png" alt="Image 3">
+                      </div>
+                      <div class="card-content">
+                        <h3 style="font-family: 'Playfair Display', cursive; font-weight:400; text-align: center; color: black;">Php 120.00</h3>
+                        <p style="font-family: 'Quicksand', cursive; font-weight:400; text-align: center; line-height: 1.5; color: black; ">Rich, buttery glaze with a hint of vanilla, offering a light.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col s2 m4 14">
+                    <div class="card transparent-card">
+                      <div class="card-image">
+                        <img src="menu/heart.png" alt="Image 4">
+                      </div>
+                      <div class="card-content">
+                        <h3 style="font-family: 'Playfair Display', cursive; font-weight:400; text-align: center; color: black;">Php 120.00</h3>
+                        <p style="font-family: 'Quicksand', cursive; font-weight:400; text-align: center; line-height: 1.5; color: black; "> A heavenly blend of rich, velvety chocolate and soft, fluffy dough. Each bite is a decadent indulgence, perfect for chocolate lovers.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col s2 m4 14">
+                    <div class="card transparent-card">
+                      <div class="card-image">
+                        <img src="menu/whirl.png" alt="Image 5">
+                      </div>
+                      <div class="card-content">
+                        <h3 style="font-family: 'Playfair Display', cursive; font-weight:400; text-align: center; color: black;">Php 120.00</h3>
+                        <p style="font-family: 'Quicksand', cursive; font-weight:400; text-align: center; line-height: 1.5; color: black; ">Indulge in a nutty delight! This donut is coated in a crunchy, nutty topping, often with a hint of cinnamon and sugar.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col s2 m4 14">
+                    <div class="card transparent-card">
+                      <div class="card-image">
+                        <img src="menu/k&k.png" alt="image6">
+                      <div class="card-content">
+                        <h3 style="font-family: 'Playfair Display', cursive; font-weight:400; text-align: center; color: black;">Php 120.00</h3>
+                        <p style="font-family: 'Quicksand', cursive; font-weight:400; text-align: center; line-height: 1.5; color: black; ">A heavenly blend of sweet and crunchy! This donut is filled with a creamy cookie butter filling and topped with crushed Oreo cookies. </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <!-- CHOCOLATE Tab -->
+
+            <div class="container">
+               <div id="ChocoLov" class="row">
+            
+                 <h3 style="font-family: 'Playfair Display', cursive; font-weight:400; color: #d00000;" class="center-align" > "Our rich, decadent donuts are made with the finest cocoa, ensuring every bite is a moment of pure bliss."</h3>
+                 <div class="col s2 m4 14">
+                   <div class="card transparent-card">
+                     <div class="card-image">
+                       <img src="menu/choco1.png" alt="Image 1">
+                     </div>
+                     <div class="card-content">
+                       <h3 style="font-family: 'Playfair Display', cursive; font-weight:400; text-align: center; color: black">Php 125.00</h3>
+                       <p style="font-family: 'Quicksand', cursive; font-weight:400; text-align: center; line-height: 1.5; color: black; "> Coffee lovers who want to indulge their sweet tooth.</p>
+                     </div>
+                   </div>
+                 </div>
+                 <div class="col s2 m4 14">
+                   <div class="card transparent-card">
+                     <div class="card-image">
+                       <img src="menu/choco2.png" alt="Image 2">
+                     </div>
+                     <div class="card-content">
+                       <h3 style="font-family: 'Playfair Display', cursive; font-weight:400; text-align: center; color: black;">Php 125.00</h3>
+                       <p style="font-family: 'Quicksand', cursive; font-weight:400; text-align: center; line-height: 1.5; color: black; "></p>
+                     </div>
+                   </div>
+                 </div>
+                 <div class="col s2 m4 14">
+                   <div class="card transparent-card">
+                     <div class="card-image">
+                       <img src="menu/choco3.png" alt="Image 3">
+                     </div>
+                     <div class="card-content">
+                       <h3 style="font-family: 'Playfair Display', cursive; font-weight:400; text-align: center; color: black;">Php 125.00</h3>
+                       <p style="font-family: 'Quicksand', cursive; font-weight:400; text-align: center; line-height: 1.5;  color: black; ">A creamy, smooth chocolate flavor with a light, airy texture.</p>
+                     </div>
+                   </div>
+                 </div>
+                 <div class="col s2 m4 14">
+                   <div class="card transparent-card">
+                     <div class="card-image">
+                       <img src="menu/choco4.png" alt="Image 4">
+                     </div>
+                     <div class="card-content">
+                       <h3 style="font-family: 'Playfair Display', cursive; font-weight:400; text-align: center; color: black;">Php 125.00</h3>
+                       <p style="font-family: 'Quicksand', cursive; font-weight:400; text-align: center; line-height: 1.5; color: black; "> A decadent combination of rich chocolate and nutty hazelnut. This indulgent donut is perfect for those who love a bit of crunch with their chocolate.</p>
+                     </div>
+                   </div>
+                 </div>
+                 <div class="col s2 m4 14">
+                   <div class="card transparent-card">
+                     <div class="card-image">
+                       <img src="menu/choco5.png" alt="Image 5">
+                     </div>
+                     <div class="card-content">
+                       <h3 style="font-family: 'Playfair Display', cursive; font-weight:400; text-align: center; color: black;">Php 125.00</h3>
+                       <p style="font-family: 'Quicksand', cursive; font-weight:400; text-align: center; line-height: 1.5; color: black; ">A rich, intense chocolate flavor with a deep, dark color. The perfect choice for chocolate lovers who crave a bold, satisfying taste.</p>
+                     </div>
+                   </div>
+                 </div>
+                 <div class="col s2 m4 14">
+                   <div class="card transparent-card">
+                     <div class="card-image">
+                       <img src="menu/choco6.png" alt="image6">
+                     <div class="card-content">
+                       <h3 style="font-family: 'Playfair Display', cursive; font-weight:400; text-align: center; color: black;">Php 125.00</h3>
+                       <p style="font-family: 'Quicksand', cursive; font-weight:400; text-align: center; line-height: 1.5; color: black; ">A harmonious blend of sweet chocolate and tart raspberry. This refreshing flavor is perfect for those who want a bit of tanginess with their chocolate.</p>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+
+             <!-- FRUIT Tab -->
+             <div class="fruit-container">
+              <div id="Fruitreats">
+              <h3 class="center-align quote">
+                "Experience the pure, natural sweetness of our fruit-filled donuts."
+              </h3>
+              <br><div class="row fruit-row">
+                <!-- Card 1 -->
+                <div class="fruit-card">
+                  <img src="menu/FRUIT1.png" alt="Fruit Donut 1">
+                  <h3  style="font-family: 'Playfair Display', cursive; font-weight:400; text-align: center; color: black;">Php 130.00</h3>
+                  <p style="font-family: 'Quicksand', cursive; font-weight:400; text-align: center; line-height: 1.5; color: black; ">The sweet and tart flavor of the blackberry is perfectly balanced with a light and fluffy cake.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="fruit-card">
+                  <img style="font-family: 'Playfair Display', cursive; font-weight:400; text-align: center; color: black;" src="menu/FRUIT2.png" alt="Fruit Donut 2">
+                  <h3 style="font-family: 'Playfair Display', cursive; font-weight:400; text-align: center; color: black;">Php 130.00</h3>
+                  <p style="font-family: 'Quicksand', cursive; font-weight:400; text-align: center; line-height: 1.5; color: black; ">A tangy and sweet treat, this donut is filled with a raspberry jam and topped with a creamy frosting.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="fruit-card">
+                  <img src="menu/FRUIT3.png" alt="Fruit Donut 3">
+                  <h3 style="font-family: 'Playfair Display', cursive; font-weight:400; text-align: center; color: black;">Php 130.00</h3>
+                  <p style="font-family: 'Quicksand', cursive; font-weight:400; text-align: center; line-height: 1.5; color: black; ">It's a sweet and exotic treat that will transport you to a tropical paradise.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="fruit-card">
+                  <img src="menu/FRUIT4.png" alt="Fruit Donut 4">
+                  <h3 style="font-family: 'Playfair Display', cursive; font-weight:400; text-align: center; color: black;">Php 130.00</h3>
+                  <p style="font-family: 'Quicksand', cursive; font-weight:400; text-align: center; line-height: 1.5;  color: black; ">A classic combination of sweet strawberries and creamy frosting.</p>
+                </div>
+                <!-- Card 5 -->
+                <div class="fruit-card">
+                  <img src="menu/FRUIT5.png" alt="Fruit Donut 4">
+                  <h3 style="font-family: 'Playfair Display', cursive; font-weight:400; text-align: center; color: black;">Php 130.00</h3>
+                  <p style="font-family: 'Quicksand', cursive; font-weight:400; text-align: center; line-height: 1.5; color: black; ">A bright and citrusy donut with a refreshing lemon glaze. This light and airy donut is the perfect pick-me-up.</p>
+                </div>
+                <!-- Card 6 -->
+                <div class="fruit-card">
+                  <img src="menu/FRUIT6.png" alt="Fruit Donut 4">
+                  <h3 style="font-family: 'Playfair Display', cursive; font-weight:400; text-align: center; color: black;">Php 130.00</h3>
+                  <p style="font-family: 'Quicksand', cursive; font-weight:400; text-align: center; line-height: 1.5;  color: black; ">A bright and citrusy donut with a refreshing lemon glaze. This light and airy donut is the perfect pick-me-up.</p>
+                </div>
+              </div>
+            </div>
+            </div>
+
+<!--Specialty -->
+          <div class="fruit-container">
+           <div id="Specialty">
+             <h3 class="center-align quote">
+                "Our specialty donuts bring unforgettable treat."
+             </h3>
+          <br><div class="row fruit-row">
+    <!-- Card 1 -->
+    <div class="fruit-card">
+      <img src="menu/Special1.png" alt="Fruit Donut 1">
+      <h3  style="font-family: 'Playfair Display', cursive; font-weight:400; text-align: center; color: black;">Php 140.00</h3>
+      <p style="font-family: 'Quicksand', cursive; font-weight:400; text-align: center; line-height: 1.5;  color: black; ">The sweet and tart flavor of the blackberry is perfectly balanced with a light and fluffy cake.</p>
+    </div>
+    <!-- Card 2 -->
+    <div class="fruit-card">
+      <img src="menu/Special2.png" alt="Fruit Donut 2">
+      <h3 style="font-family: 'Playfair Display', cursive; font-weight:400; text-align: center; color: black;">Php 140.00</h3>
+      <p style="font-family: 'Quicksand', cursive; font-weight:400; text-align: center; line-height: 1.5; color: black; ">A tangy and sweet treat, this donut is filled with a raspberry jam and topped with a creamy frosting.</p>
+    </div>
+    <!-- Card 3 -->
+    <div class="fruit-card">
+      <img src="menu/Special3.png" alt="Fruit Donut 3">
+      <h3 style="font-family: 'Playfair Display', cursive; font-weight:400; text-align: center; color: black;">Php 140.00</h3>
+      <p style="font-family: 'Quicksand', cursive; font-weight:400; text-align: center; line-height: 1.5; color: black; ">It's a sweet and exotic treat that will transport you to a tropical paradise.</p>
+    </div>
+    <!-- Card 4 -->
+    <div class="fruit-card">
+      <img src="menu/Special4.png" alt="Fruit Donut 4">
+      <h3 style="font-family: 'Playfair Display', cursive; font-weight:400; text-align: center; color: black;">Php 140.00</h3>
+      <p style="font-family: 'Quicksand', cursive; font-weight:400; text-align: center; line-height: 1.5; color: black; ">A classic combination of sweet strawberries and creamy frosting.</p>
+    </div>
+    <!-- Card 5 -->
+    <div class="fruit-card">
+      <img src="menu/Special5.png" alt="Fruit Donut 4">
+      <h3 style="font-family: 'Playfair Display', cursive; font-weight:400; text-align: center; color: black;">Php 140.00</h3>
+      <p style="font-family: 'Quicksand', cursive; font-weight:400; text-align: center; line-height: 1.5; color: black; ">A bright and citrusy donut with a refreshing lemon glaze. This light and airy donut is the perfect pick-me-up.</p>
+    </div>
+    <!-- Card 6 -->
+    <div class="fruit-card">
+      <img src="menu/Special6.png" alt="Fruit Donut 4">
+      <h3 style="font-family: 'Playfair Display', cursive; font-weight:400; text-align: center; color: black;">Php 140.00</h3>
+      <p style="font-family: 'Quicksand', cursive; font-weight:400; text-align: center; line-height: 1.5; color: black; ">A bright and citrusy donut with a refreshing lemon glaze. This light and airy donut is the perfect pick-me-up.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+        
+          
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+          <script>
+            document.addEventListener('DOMContentLoaded', function () {
+             
+              const tabs = document.querySelectorAll('.tabs');
+              M.Tabs.init(tabs);
+              $('.tooltipped').tooltip();
+              $('.scrollspy').scrollSpy();
+            });
+            document.addEventListener('DOMContentLoaded', function () {
+            const sidenav = document.querySelectorAll('.sidenav');
+            M.Sidenav.init(sidenav);
+        });
+          </script>
+   
+        <script src="js/jquery.js"></script>
+        <script src="js/materialize.min.js"></script>
+
+        
+     </body>
+</html>
